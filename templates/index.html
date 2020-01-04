@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Regex Converter
+{% endblock %}
+
+{% block main %}
+    <form action="/result" method="post" id="form">
+        <div class="form-group">
+            <textarea autocomplete="off" autofocus  class="form-control" cols="40" rows="5" name="input" id="input"placeholder="Conversion text"></textarea>
+        </div>
+        <div>
+            <select class="form-control" name="method" id="method">
+                <option value="" disabled selected>Select a conversion method</option>
+                <option value="convert1">[Ss]ample output</option>
+                <option value="convert2">[Ss]ample [Oo]utput</option>
+                <option value="convert3">[Ss][Aa][Mm][Pp][Ll][Ee] [Ou][Uu][Tt][Pp][Uu][Tt]</option>
+                <option value="convert4">[Ss]ample|[Oo]utput</option>
+                <option value="convert5">[Ss][Aa][Mm][Pp][Ll][Ee]|[Oo][Uu][Tt][Pp][Uu][Tt]</option>
+                <option value="all">All 5 options</option>
+            </select>
+        <hr>
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Convert</button>
+    </form>
+    <script>
+        document.getElementById('form').onsubmit = function() {
+                if(!document.getElementById('input').value) {
+                    alert('Please enter text to convert.')
+                    return false;
+                }
+                else if (!document.getElementById('method').value) {
+                    alert('Please select a method of conversion.')
+                    return false
+                }
+                return true
+            };
+    </script>
+{% endblock %}
