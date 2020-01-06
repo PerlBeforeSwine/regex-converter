@@ -6,6 +6,10 @@
 
 {% block main %}
     <form action="/result" method="post" id="form">
+        <p>
+            Please enter the text you would like to convert to regex below. 
+            Please note that all non-alphabetic characters apart from spaces and apostrophes will be dropped from your output.
+        </p>
         <div class="form-group">
             <textarea autocomplete="off" autofocus  class="form-control" cols="40" rows="5" name="input" id="input"placeholder="Conversion text"></textarea>
         </div>
