@@ -22,7 +22,7 @@ def apology(message, code=400):
 def convert1(text):
     """Convert to regex - first letter case insensitive"""
 
-    # Sanitize input to ensure it's alphanumeric + spaces
+    # Sanitize input to ensure it's alphanumeric, retain spaces and apostrophes
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
@@ -43,7 +43,7 @@ def convert1(text):
 def convert2(text):
     """Convert to regex - first letter in each word case insensitive"""
 
-    # Sanitize input to ensure it's alphanumeric + spaces
+    # Sanitize input to ensure it's alphanumeric, retain spaces and apostrophes
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
@@ -70,7 +70,7 @@ def convert2(text):
 
 def convert3(text):
     """All letters case insensitive, retain spaces"""
-    # Sanitize input to ensure it's alphanumeric + spaces
+    # Sanitize input to ensure it's alphanumeric, retain spaces and apostrophes
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
@@ -91,7 +91,7 @@ def convert3(text):
 
 def convert4(text):
     """First of each word case insensitive, all words as OR"""
-    # Sanitize input to ensure it's alphanumeric + spaces
+    # Sanitize input to ensure it's alphanumeric, retain spaces and apostrophes
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
@@ -118,7 +118,7 @@ def convert4(text):
 
 def convert5(text):
     """All case insensitive, all ORs"""
-    # Sanitize input to ensure it's alphanumeric + spaces
+    # Sanitize input to ensure it's alphanumeric, retain spaces and apostrophes
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
