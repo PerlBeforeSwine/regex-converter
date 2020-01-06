@@ -26,7 +26,7 @@ def convert1(text):
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
-            if not text[index] == " ":
+            if not text[index] == " " and not text[index] == "'":
                 text[index] = '*'
 
     text[0] = '[' + text[0].upper() + text[0].lower() + ']'
@@ -47,7 +47,7 @@ def convert2(text):
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
-            if not text[index] == " ":
+            if not text[index] == " " and not text[index] == "'":
                 text[index] = '*'
 
     output = ""
@@ -74,7 +74,7 @@ def convert3(text):
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
-            if not text[index] == " ":
+            if not text[index] == " " and not text[index] == "'":
                 text[index] = '*'
 
     output = ""
@@ -95,7 +95,7 @@ def convert4(text):
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
-            if not text[index] == " ":
+            if not text[index] == " " and not text[index] == "'":
                 text[index] = '*'
 
     output = ""
@@ -122,7 +122,7 @@ def convert5(text):
     text = list(text)
     for index in range(len(text)):
         if not text[index].isalpha():
-            if not text[index] == " ":
+            if not text[index] == " " and not text[index] == "'":
                 text[index] = '*'
 
     output = ""
